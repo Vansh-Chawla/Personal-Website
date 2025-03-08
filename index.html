@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vansh Chawla - Portfolio</title>
+  <link rel="stylesheet" href="Styles.css">
+  <script src="script.js" defer></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <img src="Title.png" alt="Vansh Logo" class="logo">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero">
+  <div class="hero-content">
+    <h1><span id="typed-text">Hi, I’m Vansh Chawla! 👋</span></h1>
+    <p>
+      I’m currently a Computer Science student at the University of St. Andrews, but my love for technology started long before.
+      <br>
+      Let’s connect—I’d love to chat!
+    </p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <div class="about-content">
+    <div>
+      <h2 class="about-title">About Me</h2>
+      <p class="abouttext">
+        Hello! I'm Vansh Chawla, a first-year Computer Science student at the University of St Andrews with a passion for technology and research. My journey into coding began at the age of 9 when I was introduced to HTML and CSS at my dad’s office. That sparked my interest in programming, which has since expanded into robotics, machine learning, and web development.
+
+        In addition to my studies, I enjoy researching and continuously developing new skills. Recently, I’ve delved into market analysis in cryptocurrency, which has been an exciting challenge. I am also working on an interdisciplinary research paper that focuses on developing an affordable device that uses light to detect adulteration in milk, helping ensure quality for farmers and consumers. This project involves using Arduino to test my research, combining my interests in both computer science and chemical engineering.
+
+        When I’m not coding or researching, you can find me playing sports (especially cricket), listening to music, or working on expanding my knowledge in various fields. My goal is to pursue a master’s degree in networking, cyber security, or database administration, depending on how my interests evolve.
+
+        Feel free to explore my website to learn more about my work, projects, and skills!
+      </p>
+    </div>
+    <div class="about-container">
+      <div class="slideshow-container">
+        <div class="slideshow">
+          <div class="slide"><img src="myphotos/image1.jpg" alt="Photo 1"></div>
+          <div class="slide"><img src="myphotos/image2.jpg" alt="Photo 2"></div>
+          <div class="slide"><img src="myphotos/image3.jpg" alt="Photo 3"></div>
+          <div class="slide"><img src="myphotos/image4.jpg" alt="Photo 4"></div>
+          <div class="slide"><img src="myphotos/image5.jpg" alt="Photo 5"></div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+      <div class="slideshow-dots">
+        <span class="dot" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+        <span class="dot" onclick="goToSlide(3)"></span>
+        <span class="dot" onclick="goToSlide(4)"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<div id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-box">
+      <i class="fab fa-html5"></i>
+      <p>HTML: Structure of web pages</p>
+    </div>
+    <div class="skill-box">
+      <i class="fab fa-css3-alt"></i>
+      <p>CSS: Styling web pages</p>
+    </div>
+    <div class="skill-box">
+      <i class="fab fa-js"></i>
+      <p>JavaScript: Adds interactivity</p>
+    </div>
+    <div class="skill-box">
+      <i class="fab fa-python"></i>
+      <p>Python: General-purpose programming</p>
+    </div>
+    <div class="skill-box">
+      <i class="fab fa-java"></i>
+      <p>Java: Object-oriented programming</p>
+    </div>
+    <div class="skill-box">
+      <i class="fas fa-database"></i>
+      <p>SQL: Database management</p>
+    </div>
+    <div class="skill-box">
+      <i class="fas fa-cogs"></i>
+      <p>Arduino: Hardware programming</p>
+    </div>
+    <div class="skill-box">
+      <i class="fas fa-robot"></i>
+      <p>Machine Learning: Building intelligent models</p>
+    </div>
+    <div class="skill-box">
+      <i class="fas fa-brain"></i>
+      <p>AI: Creating smart, autonomous systems</p>
+    </div>
+    <div class="skill-box">
+      <i class="fas fa-terminal"></i>
+      <p>Bash: Command-line scripting</p>
+    </div>
+    <div class="skill-box">
+      <i class="fas fa-shield-alt"></i>
+      <p>Cybersecurity: Protecting systems from threats</p>
+    </div>
+    <div class="skill-box">
+      <i class="fas fa-chart-line"></i>
+      <p>Investing in Cryptocurrencies: Managing digital assets</p>
+    </div>
+  </div>
+</div>
+
+<!-- Projects Section -->
+<div id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-container">
+    <div class="project-box" onclick="openModal(1)">
+      <i class="fas fa-users-cog"></i>
+      <h3>Age and Gender Prediction</h3>
+      <p>Machine Learning - UTKFace Dataset</p>
+    </div>
+    <div class="project-box" onclick="openModal(2)">
+      <i class="fas fa-code"></i>
+      <h3>Compiler: Turtle Script to TypeScript</h3>
+      <p>Compiler Design</p>
+    </div>
+    <div class="project-box" onclick="openModal(3)">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Web Development</h3>
+      <p>Portfolio Website</p>
+    </div>
+    <div class="project-box" onclick="openModal(4)">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Tuck Shop App</h3>
+      <p>App Development</p>
+    </div>
+    <div class="project-box" onclick="openModal(5)">
+      <i class="fas fa-terminal"></i>
+      <h3>Bash Command Replication: ps, top, htop</h3>
+      <p>Bash: Understanding the processes running in Unix systems</p>
+    </div>
+    <div class="project-box" onclick="openModal(6)">
+      <i class="fas fa-hand-paper"></i>
+      <h3>Robotic Hand with Glove</h3>
+      <p>Arduino - Gesture Control</p>
+    </div>
+    <div class="project-box" onclick="openModal(7)">
+      <i class="fas fa-blind"></i>
+      <h3>Blind Man Stick</h3>
+      <p>Arduino - Assistive Tech</p>
+    </div>
+    <div class="project-box" onclick="openModal(8)">
+      <i class="fas fa-home"></i>
+      <h3>Home Security System</h3>
+      <p>Arduino - Smart Home</p>
+    </div>
+    <div class="project-box" onclick="openModal(9)">
+      <i class="fas fa-gamepad"></i>
+      <h3>Brick Breaker Game</h3>
+      <p>A game built in Processing (Java).</p>
+    </div>
+    <div class="project-box" onclick="openModal(10)">
+      <i class="fas fa-universal-access"></i>
+      <h3>Blind Accessibility Project</h3>
+      <p>Using AI to emulate reality for the blind.</p>
+    </div>
+    <div class="project-box" onclick="openModal(11)">
+      <i class="fab fa-discord"></i>
+      <h3>Teacher's Discord Bot</h3>
+      <p>A bot for managing classes and attendance.</p>
+    </div>
+    <div class="project-box" onclick="openModal(12)">
+      <i class="fas fa-file-signature"></i>
+      <h3>Resolu - Short-form Petitions</h3>
+      <p>A revolutionary petition platform.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project Details -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="project-description"></div>
+    <div id="download-link"></div>
+  </div>
+</div>
+
+<!-- Publications Section -->
+<section id="publications">
+  <h2>My Publications</h2>
+  <div class="publications-container">
+    <div class="publication-preview">
+      <a href="Publications/FINAL FINAL CS EE.pdf" target="_blank">
+        <img src="publogos/logo7.png" alt="Publication 1 Preview">
+        <p>How can Regression and Classification supervised machine learning techniques for age and gender prediction respectively, be applied towards a facial recognition dataset (UTKFace)?</p>
+      </a>
+    </div>
+    <div class="publication-preview">
+      <a href="Publications/CS1007 Report.pdf" target="_blank">
+        <img src="publogos/logo3.png" alt="Publication 2 Preview">
+        <p>Comparison of various compression techniques</p>
+      </a>
+    </div>
+    <div class="publication-preview">
+      <a href="Publications/Physics IAA.pdf" target="_blank">
+        <img src="publogos/logo4.png" alt="Publication 3 Preview">
+        <p>How does the utilization of the small angle approximation on the angles 10°, 15°, 20°, 25°, 30°, 35°, 40°, 45°, 50° affect the accuracy of determining the time period compared to the actual value?</p>
+      </a>
+    </div>
+    <div class="publication-preview">
+      <a href="Publications/Chem IA.pdf" target="_blank">
+        <img src="publogos/logo1.png" alt="Publication 4 Preview">
+        <p>How does the change in current (0.05, 0.10, 0.15, 0.20, 0.25, and 0.30) (in amperes) impact the average area of growth, which measures the rate of growth of Tin (Sn) crystals, keeping the concentration of Tin (II) chloride aqueous solution (0.5M) and voltage applied in the circuit (8V) constant?</p>
+      </a>
+    </div>
+    <div class="publication-preview">
+      <a href="Publications/Math IA.pdf" target="_blank">
+        <img src="publogos/logo2.png" alt="Publication 5 Preview">
+        <p>Decoding Factorials: Surprising Paths to Approximate Uncommon Inputs</p>
+      </a>
+    </div>
+    <div class="publication-preview">
+      <a href="Publications/TOK Changes 3.pdf" target="_blank">
+        <img src="publogos/logo6.png" alt="Publication 6 Preview">
+        <p>Are we too quick to assume that the most recent evidence is inevitably the strongest? Discuss with reference to the natural sciences and one other area of knowledge.</p>
+      </a>
+    </div>
+    <div class="publication-preview">
+      <a href="Publications/IA Exhibition Final commentary.pdf" target="_blank">
+        <img src="publogos/logo5.png" alt="Publication 7 Preview">
+        <p>How do we know current knowledge is an improvement upon past knowledge?</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Resume Section -->
+<div id="resume">
+  <h2>My Resume</h2>
+  <div class="resume-preview" onclick="openResumeModal()">
+    <img src="resume.pdf" alt="Resume Preview">
+    <p>Click to View</p>
+  </div>
+  <!-- Resume Modal -->
+  <div id="resumeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeResumeModal()">&times;</span>
+      <iframe src="resume.pdf"></iframe>
+      <a href="resume.pdf" download class="download-btn">Download Resume</a>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact">
+  <h2>Contact Me</h2>
+  <div class="social-links">
+    <a href="https://github.com/VanshChawla" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://x.com/VanshCh46448062" target="_blank"><i class="fab fa-twitter"></i> X</a>
+    <a href="https://www.instagram.com/vansh.c__/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.linkedin.com/in/vansh-chawla-534645200/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+  </div>
+  <form id="contact-form">
+    <div class="input-group">
+      <input type="text" id="name" name="name" required placeholder="Your Name">
+    </div>
+    <div class="input-group">
+      <input type="email" id="email" name="email" required placeholder="Your Email">
+    </div>
+    <div class="input-group">
+      <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+  <div id="success-message" style="display: none;">
+    <p>Thank you for reaching out! I will get back to you soon.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Vansh Chawla. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
